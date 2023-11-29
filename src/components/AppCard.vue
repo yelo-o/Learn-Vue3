@@ -12,22 +12,26 @@
 </template>
 
 <script>
-import { useCssModule } from 'vue';
+import { useCssModule, ref } from 'vue';
 
 console.log('AppCard module');
 export default {
 	setup() {
-		const style = useCssModule();
-		console.log('style : ',style)
+		// const style = useCssModule();
+		// console.log('style : ',style)
 		console.log('AppCard setup()');
-		return {};
+
+		const color = ref('red');
+		color.value = 'yellow'
+
+		return {color};
 	},
 };
 </script>
 
-<style module>
+<style>
 .red {
-	color: red !important;
+	color: v-bind(color) !important;
 }
 </style>
 

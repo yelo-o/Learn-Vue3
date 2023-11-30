@@ -7,6 +7,7 @@
 
 <script>
 export default {
+	emits: ['createPost'],
 	setup(props, { emit }) {
 		const createPost = () => {
 			emit('createPost', 111, 2, 3, '김길동');

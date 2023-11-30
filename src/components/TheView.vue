@@ -50,8 +50,9 @@ export default {
 				type: 'notice',
 			},
 		]);
-		const createPost = (a, b, c, d) => {
-			console.log('createPost', a, b, c, d);
+		const createPost = newTitle => {
+			console.log('createPost');
+			console.log('newTitle : ', newTitle);
 		};
 
 		return { obj, posts, createPost };
